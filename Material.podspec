@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = 'Material-nayla'
-	s.version = '3.1.9'
+	s.version = '3.2.1'
 	s.swift_version = '5.0'
 	s.license = 'BSD-3-Clause'
 	s.summary = 'A UI/UX framework for creating beautiful applications.'
