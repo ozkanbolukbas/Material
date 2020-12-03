@@ -46,7 +46,7 @@ extension UIViewController {
   }
 }
 
-open class TableViewController: ViewController {
+open class TableViewController: MaterialViewController {
   /// A reference to a Reminder.
   public let tableView = TableView()
   

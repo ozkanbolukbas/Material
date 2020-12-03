@@ -25,7 +25,7 @@
 
 import UIKit
 
-open class ViewController: UIViewController, Themeable {
+open class MaterialViewController: UIViewController, Themeable {
   open override func viewDidLoad() {
     super.viewDidLoad()
     prepare()

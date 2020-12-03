@@ -383,7 +383,7 @@ private extension DialogView {
   }
   
   /// Non-hidden buttons within buttonArea.
-  var nonHiddenButtons: [Button] {
+  var nonHiddenButtons: [MaterialButton] {
     positiveButton.isHidden = positiveButton.title(for: .normal)?.isEmpty ?? true
     negativeButton.isHidden = negativeButton.title(for: .normal)?.isEmpty ?? true
     neutralButton.isHidden = neutralButton.title(for: .normal)?.isEmpty ?? true
@@ -405,7 +405,7 @@ private extension UIScrollView {
   }
 }
 
-private extension Button {
+private extension MaterialButton {
   /// Optimal width for dialog button.
   var optimalWidth: CGFloat {
     let size = CGSize(width: .greatestFiniteMagnitude, height: Constants.button.height)

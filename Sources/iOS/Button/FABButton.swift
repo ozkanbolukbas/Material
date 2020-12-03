@@ -25,7 +25,7 @@
 
 import UIKit
 
-open class FABButton: Button {
+open class FABButton: MaterialButton {
   open override func prepare() {
     super.prepare()
     depthPreset = .depth1

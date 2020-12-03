@@ -57,7 +57,7 @@ public protocol DialogDelegate {
    - Returns: A Boolean.
    */
   @objc
-  optional func dialog(_ dialog: Dialog, shouldDismiss button: Button?) -> Bool
+  optional func dialog(_ dialog: Dialog, shouldDismiss button: MaterialButton?) -> Bool
   
   /**
    A delegation method that is executed when the positive button of Dialog is tapped.
@@ -65,7 +65,7 @@ public protocol DialogDelegate {
    - Parameter didTapPositive button: A Button.
    */
   @objc
-  optional func dialog(_ dialog: Dialog, didTapPositive button: Button)
+  optional func dialog(_ dialog: Dialog, didTapPositive button: MaterialButton)
   
   /**
    A delegation method that is executed when the negative button of Dialog is tapped.
@@ -73,7 +73,7 @@ public protocol DialogDelegate {
    - Parameter didTapNegative button: A Button.
    */
   @objc
-  optional func dialog(_ dialog: Dialog, didTapNegative button: Button)
+  optional func dialog(_ dialog: Dialog, didTapNegative button: MaterialButton)
   
   /**
    A delegation method that is executed when the neutral button of Dialog is tapped.
@@ -81,7 +81,7 @@ public protocol DialogDelegate {
    - Parameter didTapNeutral button: A Button.
    */
   @objc
-  optional func dialog(_ dialog: Dialog, didTapNeutral button: Button)
+  optional func dialog(_ dialog: Dialog, didTapNeutral button: MaterialButton)
 }
 
 /// A builder for DialogController.
@@ -203,7 +203,7 @@ open class Dialog: NSObject {
    - Returns: Dialog itself to allow chaining.
    */
   @discardableResult
-  open func shouldDismiss(handler: ((DialogView, Button?) -> Bool)?) -> Dialog {
+  open func shouldDismiss(handler: ((DialogView, MaterialButton?) -> Bool)?) -> Dialog {
     controller.shouldDismissHandler = { [weak self] dialogView, button in
       guard let strongSelf = self else { return true }
       let d = strongSelf.delegate?.dialog?(strongSelf, shouldDismiss: button) ?? true

@@ -40,7 +40,7 @@ open class DialogController<T: DialogView>: UIViewController {
    A reference to should-dismiss handler which takes dialogView
    and tapped button and returns Boolean indicating if dialog should be dismissed.
    */
-  open var shouldDismissHandler: ((T, Button?) -> Bool)?
+  open var shouldDismissHandler: ((T, MaterialButton?) -> Bool)?
   
   /// A reference to handler for when positiveButton is tapped.
   open var didTapPositiveButtonHandler: (() -> Void)?
@@ -115,7 +115,7 @@ open class DialogController<T: DialogView>: UIViewController {
   
   /// Handler for when one of 3 dialog buttons is tapped.
   @objc
-  private func didTapButton(_ sender: Button) {
+  private func didTapButton(_ sender: MaterialButton) {
     switch sender {
     case dialogView.positiveButton:
       didTapPositiveButtonHandler?()
@@ -147,7 +147,7 @@ private extension DialogController {
   func prepareDialogView() {
     view.layout(dialogView).center()
     dialogView.buttonArea.subviews.forEach {
-      ($0 as? Button)?.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+      ($0 as? MaterialButton)?.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
     }
   }
 }
@@ -160,7 +160,7 @@ private extension DialogController {
    - Parameter isAnimated: A boolean indicating if the dismissal should be animated.
    - Parameter using button: A button triggering the dismissal.
    */
-  func dismiss(isTriggeredByUserInteraction: Bool, isAnimated: Bool, using button: Button? = nil) {
+  func dismiss(isTriggeredByUserInteraction: Bool, isAnimated: Bool, using button: MaterialButton? = nil) {
     if isTriggeredByUserInteraction {
       guard shouldDismissHandler?(dialogView, button) ?? true else {
         return

@@ -25,7 +25,7 @@
 
 import UIKit
 
-open class BaseButtonGroup<T: Button>: View {
+open class BaseButtonGroup<T: MaterialButton>: View {
   
   /// Holds reference to buttons within the group.
   open var buttons: [T] = [] {
@@ -78,7 +78,7 @@ open class BaseButtonGroup<T: Button>: View {
   open func didTap(button: T, at index: Int) { }
   
   @objc
-  private func didTap(_ sender: Button) {
+  private func didTap(_ sender: MaterialButton) {
     guard let sender = sender as? T,
       let index = buttons.firstIndex(of: sender)
       else { return }

@@ -25,7 +25,7 @@
 
 import UIKit
 
-open class RaisedButton: Button {
+open class RaisedButton: MaterialButton {
   open override func prepare() {
     super.prepare()
     depthPreset = .depth1

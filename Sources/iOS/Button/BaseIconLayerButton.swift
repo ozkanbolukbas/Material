@@ -27,7 +27,7 @@ import UIKit
 import Motion
 
 /// Implements common logic for CheckButton and RadioButton
-open class BaseIconLayerButton: Button {
+open class BaseIconLayerButton: MaterialButton {
   class var iconLayer: BaseIconLayer { fatalError("Has to be implemented by subclasses") }
   lazy var iconLayer: BaseIconLayer = type(of: self).iconLayer
   

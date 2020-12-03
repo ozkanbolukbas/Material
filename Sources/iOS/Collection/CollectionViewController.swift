@@ -46,7 +46,7 @@ extension UIViewController {
   }
 }
 
-open class CollectionViewController: ViewController {
+open class CollectionViewController: MaterialViewController {
   /// A reference to a Reminder.
   public let collectionView = CollectionView()
   

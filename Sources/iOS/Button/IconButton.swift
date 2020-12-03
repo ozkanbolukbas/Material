@@ -33,7 +33,7 @@ public enum IconButtonThemingStyle {
   case onPrimary
 }
 
-open class IconButton: Button {
+open class IconButton: MaterialButton {
   /// A reference to IconButtonThemingStyle.
   open var themingStyle = IconButtonThemingStyle.onBackground
   

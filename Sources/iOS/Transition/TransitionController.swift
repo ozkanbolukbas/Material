@@ -26,7 +26,7 @@
 import UIKit
 import Motion
 
-open class TransitionController: ViewController {
+open class TransitionController: MaterialViewController {
   /**
    A Boolean property used to enable and disable interactivity
    with the rootViewController.

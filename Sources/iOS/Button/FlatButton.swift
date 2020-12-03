@@ -25,7 +25,7 @@
 
 import UIKit
 
-open class FlatButton: Button {
+open class FlatButton: MaterialButton {
   open override func prepare() {
     super.prepare()
     cornerRadiusPreset = .cornerRadius1
