@@ -8,7 +8,7 @@ let package = Package(
         .library(name: "Material", targets: ["Material"])
     ],
     dependencies: [
-        .package(url: "https://github.com/CosmicMind/Motion.git", .upToNextMajor(from: "3.1.0")),
+        .package(url: "https://github.com/ozkanbolukbas/Material.git", .upToNextMajor(from: "3.2.5")),
     ],
     targets: [
         .target(
