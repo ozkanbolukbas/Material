@@ -2,17 +2,17 @@
 import PackageDescription
 
 let package = Package(
-    name: "Material-nayla",
+    name: "Material",
     // platforms: [.iOS("8.0")],
     products: [
-        .library(name: "Material-nayla", targets: ["Material-nayla"])
+        .library(name: "Material", targets: ["Material"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ozkanbolukbas/Material.git", .upToNextMajor(from: "3.2.1")),
+        .package(url: "https://github.com/CosmicMind/Motion.git", .upToNextMajor(from: "3.1.0")),
     ],
     targets: [
         .target(
-            name: "Material-nayla",
+            name: "Material",
             dependencies: ["Motion"],
             path: "Sources",
             exclude: ["Frameworks"]
